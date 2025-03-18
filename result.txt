@@ -1,0 +1,67 @@
+train cache in gpu:
+vgg16 FP16 Training speed: 1075.1511347953676 images/second
+resnet50 FP16 Training speed: 1547.8937193880063 images/second
+tf_efficientnetv2_b0 FP16 Training speed: 3294.3085542684516 images/second
+swin_base_patch4_window7_224 FP16 Training speed: 835.5446863322687 images/second
+efficientvit_m4 FP16 Training speed: 6873.024044149506 images/second
+
+train cache in gpu:
+vgg16 FP32 Training speed: 576.1539689585919 images/second
+resnet50 FP32 Training speed: 1111.4807754957983 images/second
+tf_efficientnetv2_b0 FP32 Training speed: 2210.720933424443 images/second
+swin_base_patch4_window7_224 FP32 Training speed: 260.9405518581709 images/second
+efficientvit_m4 FP32 Training speed: 6195.85525431352 images/second
+
+train cache in gpu:
+vgg16 FP16 Training speed: 1075.821214275801 images/second
+resnet50 FP16 Training speed: 1550.3197449630604 images/second
+tf_efficientnetv2_b0 FP16 Training speed: 3301.710213583533 images/second
+swin_base_patch4_window7_224 FP16 Training speed: 836.9468806620704 images/second
+efficientvit_m4 FP16 Training speed: 6874.387916324986 images/second
+
+train cache in gpu:
+vgg16 FP32 Training speed: 581.5292674589691 images/second
+resnet50 FP32 Training speed: 1110.907052815898 images/second
+tf_efficientnetv2_b0 FP32 Training speed: 2212.9176307143557 images/second
+swin_base_patch4_window7_224 FP32 Training speed: 259.08747934870064 images/second
+efficientvit_m4 FP32 Training speed: 6222.895131349437 images/second
+
+cache in memory, not gpu
+vgg16 FP32 Training speed: 565.8525923432252 images/second
+vgg16 FP16 Training speed: 1030.5114611526203 images/second
+resnet50 FP32 Training speed: 1072.0241465106496 images/second
+resnet50 FP16 Training speed: 1473.9148850466154 images/second
+tf_efficientnetv2_b0 FP32 Training speed: 2063.015519922152 images/second
+tf_efficientnetv2_b0 FP16 Training speed: 2962.493727156292 images/second
+swin_base_patch4_window7_224 FP32 Training speed: 256.84474209627183 images/second
+swin_base_patch4_window7_224 FP16 Training speed: 812.32157816443 images/second
+efficientvit_m4 FP32 Training speed: 5135.024858073468 images/second
+efficientvit_m4 FP16 Training speed: 5535.053173579442 images/second
+
+train cache in gpu:
+vgg16 FP32 Training speed: 581.1265585784145 images/second
+vgg16 FP16 Training speed: 1074.5399896179383 images/second
+resnet50 FP32 Training speed: 1112.9929246410334 images/second
+resnet50 FP16 Training speed: 1552.0477300915904 images/second
+tf_efficientnetv2_b0 FP32 Training speed: 2215.561219755025 images/second
+tf_efficientnetv2_b0 FP16 Training speed: 3299.711130562781 images/second
+swin_base_patch4_window7_224 FP32 Training speed: 261.636325881143 images/second
+swin_base_patch4_window7_224 FP16 Training speed: 837.3679234570249 images/second
+efficientvit_m4 FP32 Training speed: 6145.770598000338 images/second
+efficientvit_m4 FP16 Training speed: 6839.576668543756 images/second
+
+inference result:
+vgg16 FP32 Inference speed: 2188.469179026994 images/second
+vgg16 FP16 Inference speed: 3539.9955335721716 images/second
+resnet50 FP32 Inference speed: 3578.1377694931025 images/second
+resnet50 FP16 Inference speed: 5605.362759756823 images/second
+tf_efficientnetv2_b0 FP32 Inference speed: 8775.01950639796 images/second
+tf_efficientnetv2_b0 FP16 Inference speed: 14957.550067970122 images/second
+swin_base_patch4_window7_224 FP32 Inference speed: 482.42081130841575 images/second
+swin_base_patch4_window7_224 FP16 Inference speed: 2562.6247369866423 images/second
+efficientvit_m4 FP32 Inference speed: 21741.303827495976 images/second
+efficientvit_m4 FP16 Inference speed: 28326.914583551148 images/second
+ 
+
+
+
