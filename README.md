@@ -1,6 +1,6 @@
-# Benchmarking Timm Models Training
+# Benchmarking RTX5090D based on Timm Models
 
-This README provides a comparison of the training and inference speeds of various deep learning models using different precisions (FP32 and FP16) on different hardware configurations. We compare the results obtained from our benchmarking script with the results published in [RTX5090 Benchmark](https://nikolasent.github.io/hardware/deeplearning/benchmark/2025/02/17/RTX5090-Benchmark.html) and also include the results from RTX5090D for a comprehensive analysis.
+This README provides a comparison of the training and inference speeds of various deep learning models using different precisions (FP32 and FP16) on RTX5090D configurations. We compare the results obtained from our benchmarking script with the results published in [RTX5090 Benchmark](https://nikolasent.github.io/hardware/deeplearning/benchmark/2025/02/17/RTX5090-Benchmark.html) .
 
 ## Benchmark Results
 
@@ -41,13 +41,11 @@ This README provides a comparison of the training and inference speeds of variou
 | EfficientViT M4 | 31682.2 | 28326.9 | -10.6% |
 
 ### Notes
-- The percentage values in parentheses represent the performance improvement compared to the previous GPU model.
-- The RTX5090D values are rounded to one decimal place.
 - The "RTX5090D vs RTX5090" column shows the percentage increase or decrease of RTX5090D performance compared to RTX5090.
 
 ## Analysis
 
-The comparison tables allow us to analyze the performance differences between different hardware configurations (RTX 3090, RTX 4090, RTX 5090, RTX5090D). We can observe how the training and inference speeds vary across different models and precisions, which can be useful for hardware selection and optimization.
+The comparison tables allow us to analyze the performance differences between RTX5090D and RTX5090. It seemed there are not much differenct when run AI training and inferencing speed except Swin Base Patch4 Window7 224 fp32. I am not sure it is a software issue or hardware issue due to I only have RTX5090D to test.
 
 ## How to Run the Benchmark
 
@@ -56,7 +54,15 @@ To reproduce our benchmark results, follow these steps:
 1. Clone the repository containing the benchmarking script.
 2. Install the required dependencies (`torch`, `timm`, `torchvision`, `tqdm`).
 3. Prepare the ImageNet dataset in the specified directory.
-4. Run the `benchmark_timm_models_train.py` script.
+4. Run the `benchmark_timm_models_train.py` and `benchmark_timm_models_inference.py` script.
 
 ```bash
 python benchmark_timm_models_train.py
+python benchmark_timm_models_inference.py
+```
+
+## File Descriptions
+
+- benchmark_timm_models_train.py: This script is the core benchmarking tool. It measures the training speeds of various deep - learning models (such as VGG16, ResNet50, etc.) with different precisions (FP32 and FP16). Users can choose to use gpu caching for faster data loading or run the training without gpu caching. The script iterates over the training data, performs forward and backward passes, and records the time taken to calculate the training speed.
+
+- benchmark_timm_models_inference.py: Focuses on benchmarking the inference speeds of models. It loads the validation data, moves a portion of it to the GPU, and measures how fast the models can generate predictions in both FP32 and FP16 precisions.
