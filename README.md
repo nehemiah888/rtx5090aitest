@@ -92,3 +92,7 @@ python test_gpu_llm_token_rate.py
 ## Disclaimer
 Please note that the benchmark results provided in this README are based on our testing environment and may vary depending on hardware configurations and other factors. We encourage users to conduct their own benchmarking to ensure accurate and up-to-date results.
 For any questions or concerns, please feel free to contact us.
+
+## Reference
+
+https://nikolasent.github.io/hardware/deeplearning/benchmark/2025/02/17/RTX5090-Benchmark.html
