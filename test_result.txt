@@ -63,5 +63,73 @@ efficientvit_m4 FP32 Inference speed: 21741.303827495976 images/second
 efficientvit_m4 FP16 Inference speed: 28326.914583551148 images/second
  
 
+Enter the number of the model to test (or 0 for all models): 0
+Model	Token Rate (tokens/second)
+
+Prompt eval rate for deepseek-r1:32b: 2679.04 tokens/s
+Eval rate for deepseek-r1:32b: 58.45 tokens/s
+deepseek-r1:32b	58.45
+
+Prompt eval rate for qwen2.5:32b: 2157.12 tokens/s
+Eval rate for qwen2.5:32b: 58.53 tokens/s
+qwen2.5:32b	58.53
+
+Prompt eval rate for qwen2.5:7b: 8071.43 tokens/s
+Eval rate for qwen2.5:7b: 191.18 tokens/s
+qwen2.5:7b	191.18
+
+Prompt eval rate for mistral-small:24b: 3769.61 tokens/s
+Eval rate for mistral-small:24b: 85.99 tokens/s
+mistral-small:24b	85.99
+
+Prompt eval rate for phi4:14b: 4769.74 tokens/s
+Eval rate for phi4:14b: 118.73 tokens/s
+phi4:14b	118.73
+
+Prompt eval rate for phi3.5:3.8b: 7380.95 tokens/s
+Eval rate for phi3.5:3.8b: 284.51 tokens/s
+phi3.5:3.8b	284.51
+
+Prompt eval rate for llama3.1:8b: 7712.77 tokens/s
+Eval rate for llama3.1:8b: 182.93 tokens/s
+llama3.1:8b	182.93
+
+Prompt eval rate for llama3.2:3b: 10615.94 tokens/s
+Eval rate for llama3.2:3b: 287.11 tokens/s
+llama3.2:3b	287.11
+
+Prompt eval rate for qwen2.5:1.5b: 12449.15 tokens/s
+Eval rate for qwen2.5:1.5b: 333.12 tokens/s
+qwen2.5:1.5b	333.12
+
+Model	Token Rate (tokens/second)
+Prompt eval rate for deepseek-r1:32b: 2259.78 tokens/s
+Eval rate for deepseek-r1:32b: 58.28 tokens/s
+deepseek-r1:32b	58.28
+Prompt eval rate for qwen2.5:32b: 2710.33 tokens/s
+Eval rate for qwen2.5:32b: 58.55 tokens/s
+qwen2.5:32b	58.55
+Prompt eval rate for qwen2.5:7b: 8252.81 tokens/s
+Eval rate for qwen2.5:7b: 190.05 tokens/s
+qwen2.5:7b	190.05
+Prompt eval rate for mistral-small:24b: 3742.09 tokens/s
+Eval rate for mistral-small:24b: 85.76 tokens/s
+mistral-small:24b	85.76
+Prompt eval rate for phi4:14b: 4647.44 tokens/s
+Eval rate for phi4:14b: 118.86 tokens/s
+phi4:14b	118.86
+Prompt eval rate for phi3.5:3.8b: 8157.89 tokens/s
+Eval rate for phi3.5:3.8b: 289.04 tokens/s
+phi3.5:3.8b	289.04
+Prompt eval rate for llama3.1:8b: 7837.84 tokens/s
+Eval rate for llama3.1:8b: 184.40 tokens/s
+llama3.1:8b	184.40
+Prompt eval rate for llama3.2:3b: 11269.23 tokens/s
+Eval rate for llama3.2:3b: 281.03 tokens/s
+llama3.2:3b	281.03
+Prompt eval rate for qwen2.5:1.5b: 13116.07 tokens/s
+Eval rate for qwen2.5:1.5b: 341.42 tokens/s
+qwen2.5:1.5b	341.42
+
 
 

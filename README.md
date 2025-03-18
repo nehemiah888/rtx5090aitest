@@ -40,12 +40,30 @@ This README provides a comparison of the training and inference speeds of variou
 | Swin Base Patch4 Window7 224 | 2471.9 | 2562.6 | +3.7% |
 | EfficientViT M4 | 31682.2 | 28326.9 | -10.6% |
 
+### LLM Inference Speeds
+
+| Model | RTX 5090 | RTX 5090D  | RTX5090D vs RTX5090 |
+| --- | --- | --- | --- |
+| deepseek-r1:32b | 60.66 | 58.45 | -3.64% |
+| qwen2.5:32b | 62.81 | 58.53 | -6.81% |
+| qwen2.5:7b | 213.48 | 191.18 | -10.44% |
+| mistral-small:24b | 91.29 | 85.99 | -5.81% |
+| phi4:14b | 130.31 | 118.73 | -8.89% |
+| phi3.5:3.8b | 346.65 | 284.51 | -17.92% |
+| llama3.1:8b | 210.79 | 182.93 | -13.22% |
+| llama3.2:3b | 339.51 | 287.11 | -15.43% |
+| qwen2.5:1.5b | 402.32 | 333.12 | -17.20% |
+
 ### Notes
 - The "RTX5090D vs RTX5090" column shows the percentage increase or decrease of RTX5090D performance compared to RTX5090.
 
 ## Analysis
 
-The comparison tables allow us to analyze the performance differences between RTX5090D and RTX5090. It seemed there are not much differenct when run AI training and inferencing speed except Swin Base Patch4 Window7 224 fp32. I am not sure it is a software issue or hardware issue due to I only have RTX5090D to test.
+The comparison tables allow us to analyze the performance differences between RTX5090D and RTX5090. It seemed there are not much difference when run AI training and inferencing speed except **Swin Base Patch4 Window7 224 fp32**. 
+
+And for LLM, when token rate is slow, there are not much difference too. But when token rate is fast, the difference is more obvious. 
+
+I am not sure it is a software/environment issue or hardware difference due to I only have RTX5090D to test.
 
 ## How to Run the Benchmark
 
@@ -53,12 +71,14 @@ To reproduce our benchmark results, follow these steps:
 
 1. Clone the repository containing the benchmarking script.
 2. Install the required dependencies (`torch`, `timm`, `torchvision`, `tqdm`).
-3. Prepare the ImageNet dataset in the specified directory.
-4. Run the `benchmark_timm_models_train.py` and `benchmark_timm_models_inference.py` script.
+3. ollama is installed
+4. Prepare the ImageNet dataset in the specified directory.
+5. Run the scripts.
 
 ```bash
 python benchmark_timm_models_train.py
 python benchmark_timm_models_inference.py
+python test_gpu_llm_token_rate.py
 ```
 
 ## File Descriptions
@@ -66,3 +86,9 @@ python benchmark_timm_models_inference.py
 - benchmark_timm_models_train.py: This script is the core benchmarking tool. It measures the training speeds of various deep - learning models (such as VGG16, ResNet50, etc.) with different precisions (FP32 and FP16). Users can choose to use gpu caching for faster data loading or run the training without gpu caching. The script iterates over the training data, performs forward and backward passes, and records the time taken to calculate the training speed.
 
 - benchmark_timm_models_inference.py: Focuses on benchmarking the inference speeds of models. It loads the validation data, moves a portion of it to the GPU, and measures how fast the models can generate predictions in both FP32 and FP16 precisions.
+
+- test_gpu_llm_token_rate.py: using ollama to test the gpu token rate.
+
+## Disclaimer
+Please note that the benchmark results provided in this README are based on our testing environment and may vary depending on hardware configurations and other factors. We encourage users to conduct their own benchmarking to ensure accurate and up-to-date results.
+For any questions or concerns, please feel free to contact us.
